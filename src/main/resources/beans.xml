@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--    SCOPES-->
+<!--    prototype -->
+<!--    singleton -->
+<!--    request-->
+<!--    session-->
+<!--    global-session-->
+
+    <bean id="helloWorldBean" class="com.example.spring.demo.SpringHelloWorld">
+        <property name="message" value="Hello World"/>
+    </bean>
+
+    <bean id="printMessage" class="com.example.spring.demo.InitializingBean"
+          init-method="afterPropertiesSet" destroy-method="beforeDelete">
+    </bean>
+
+    <bean id="messageBean" class="com.example.spring.demo.Message" init-method="init" destroy-method="destroy">
+        <property name="message" value="Simple message"/>
+    </bean>
+
+    <bean class="com.example.spring.demo.BeanPostProcessorImpl">
+
+    </bean>
+
+</beans>
