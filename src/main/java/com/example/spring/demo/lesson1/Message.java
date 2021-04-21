@@ -1,4 +1,4 @@
-package com.example.spring.demo;
+package com.example.spring.demo.lesson1;
 
 public class Message {
 
@@ -13,10 +13,10 @@ public class Message {
     }
 
     public void init() {
-        System.out.println("Bean is initializing.");
+        System.out.println("I'm in init-method");
     }
 
     public void destroy() {
-        System.out.println("Bean is destroying.");
+        System.out.println("I'm in destroy-method");
     }
 }

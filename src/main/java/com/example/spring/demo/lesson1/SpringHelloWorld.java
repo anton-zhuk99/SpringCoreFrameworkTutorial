@@ -1,4 +1,4 @@
-package com.example.spring.demo;
+package com.example.spring.demo.lesson1;
 
 import java.util.Objects;
 

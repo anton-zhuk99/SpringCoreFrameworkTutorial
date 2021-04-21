@@ -1,4 +1,4 @@
-package com.example.spring.demo;
+package com.example.spring.demo.lesson1;
 
 public interface IInitializingBean {
     void afterPropertiesSet() throws Exception;

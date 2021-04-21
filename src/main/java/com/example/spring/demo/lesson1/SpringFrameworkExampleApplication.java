@@ -1,11 +1,8 @@
-package com.example.spring.demo;
+package com.example.spring.demo.lesson1;
 
-import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import javax.swing.*;
 
 public class SpringFrameworkExampleApplication {
 
@@ -22,7 +19,7 @@ public class SpringFrameworkExampleApplication {
 
 	static void simpleAppContextExample() {
 		ApplicationContext context =
-				new ClassPathXmlApplicationContext("beans.xml");
+				new ClassPathXmlApplicationContext("beans1.xml");
 		helloWorld = (SpringHelloWorld) context.getBean("helloWorldBean");
 		String message = helloWorld.getMessage();
 		System.out.println(message);
@@ -30,7 +27,7 @@ public class SpringFrameworkExampleApplication {
 
 	static void beanScopeExample() {
 		ApplicationContext context =
-				new ClassPathXmlApplicationContext("beans.xml");
+				new ClassPathXmlApplicationContext("beans1.xml");
 		SpringHelloWorld obj1 = (SpringHelloWorld) context.getBean("helloWorldBean");
 		SpringHelloWorld obj2 = (SpringHelloWorld) context.getBean("helloWorldBean");
 
@@ -40,14 +37,14 @@ public class SpringFrameworkExampleApplication {
 
 	static void initDestroyMethod() {
 		AbstractApplicationContext context =
-				new ClassPathXmlApplicationContext("beans.xml");
+				new ClassPathXmlApplicationContext("beans1.xml");
 		InitializingBean bean = (InitializingBean) context.getBean("printMessage");
 		context.registerShutdownHook();
 	}
 
 	public static void main(String[] args) {
 		AbstractApplicationContext context =
-				new ClassPathXmlApplicationContext("beans.xml");
+				new ClassPathXmlApplicationContext("beans1.xml");
 		System.out.println("===========================================");
 		Message message = (Message) context.getBean("messageBean");
 		System.out.println("===========================================");

@@ -12,20 +12,23 @@
 <!--    session-->
 <!--    global-session-->
 
-    <bean id="helloWorldBean" class="com.example.spring.demo.SpringHelloWorld">
+    <bean id="helloWorldBean" class="com.example.spring.demo.lesson1.SpringHelloWorld">
         <property name="message" value="Hello World"/>
     </bean>
 
-    <bean id="printMessage" class="com.example.spring.demo.InitializingBean"
+    <bean id="printMessage" class="com.example.spring.demo.lesson1.InitializingBean"
           init-method="afterPropertiesSet" destroy-method="beforeDelete">
     </bean>
 
-    <bean id="messageBean" class="com.example.spring.demo.Message" init-method="init" destroy-method="destroy">
+    <bean id="messageBean" class="com.example.spring.demo.lesson1.Message"
+          init-method="init" destroy-method="destroy">
         <property name="message" value="Simple message"/>
     </bean>
 
-    <bean class="com.example.spring.demo.BeanPostProcessorImpl">
+    <bean class="com.example.spring.demo.lesson1.BeanPostProcessorImpl">
 
     </bean>
+
+
 
 </beans>
