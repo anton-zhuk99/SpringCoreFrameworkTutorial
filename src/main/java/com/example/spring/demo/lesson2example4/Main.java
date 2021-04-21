@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("beans5.xml");
+                new ClassPathXmlApplicationContext("xmlBeans/beans5.xml");
         Exam exam = context.getBean("examBean", Exam.class);
         System.out.println(exam.getSubject());
         exam.checkExam();

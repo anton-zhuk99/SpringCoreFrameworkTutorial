@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+
+<!--    Java Anno + XML -->
+
+    <bean id="employeeSA" class="com.example.spring.demo.lesson3example1.Employee">
+        <property name="fullName" value="John Doe"/>
+<!--        <property name="department" ref="departmentSA"/>-->
+        <property name="salary" value="2000"/>
+    </bean>
+
+    <bean id="employeeIT" class="com.example.spring.demo.lesson3example1.Employee">
+        <property name="fullName" value="Jack Smith"/>
+<!--        <property name="department" ref="departmentIT"/>-->
+        <property name="salary" value="1500"/>
+    </bean>
+
+    <bean id="departmentSA" class="com.example.spring.demo.lesson3example1.Department">
+        <property name="name" value="System administration"/>
+        <property name="amountOfEmployees" value="10"/>
+    </bean>
+
+    <bean id="departmentIT" class="com.example.spring.demo.lesson3example1.Department">
+        <property name="name" value="IT department"/>
+        <property name="amountOfEmployees" value="12"/>
+    </bean>
+
+</beans>

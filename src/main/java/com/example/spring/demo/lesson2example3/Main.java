@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("beans4.xml");
+                new ClassPathXmlApplicationContext("xmlBeans/beans4.xml");
         CollectionInjection coll = context.getBean("collectionsBean", CollectionInjection.class);
         System.out.println(coll.getList().toString());
         System.out.println(coll.getMap().toString());

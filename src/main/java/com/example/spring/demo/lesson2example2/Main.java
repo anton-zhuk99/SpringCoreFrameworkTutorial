@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("beans3.xml");
+                new ClassPathXmlApplicationContext("xmlBeans/beans3.xml");
         RandomIntArrayGenerator arrayGenerator = (RandomIntArrayGenerator) context.getBean("randomArrGen");
         int[] arr = arrayGenerator.getIntArray();
         System.out.println(Arrays.toString(arr));
